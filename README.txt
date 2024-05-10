@@ -22,6 +22,7 @@ kc halos same sila purpose ng PHP.
 
 ==DSA, NUMERICAL====
 *Lagay rin kyu comment kada function or block of codes para di tyu mahirapan
+***USER-MANUAL 
 
 method1
 method2
