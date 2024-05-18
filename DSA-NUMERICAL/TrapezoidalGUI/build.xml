@@ -1,4 +1,4 @@
-<project name="Trapezoidal" default="run" basedir=".">
+<project name="TrapezoidalGUI" default="run" basedir=".">
     <property name="src.dir" value="src"/>
     <property name="build.dir" value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
@@ -24,7 +24,7 @@
     </target>
 
     <target name="run" depends="compile">
-        <java classname="com.mypackage.Trapezoidal.Main" fork="true">
+        <java classname="com.mypackage.TrapezoidalGUI.Main" fork="true">
             <classpath>
                 <path path="${classes.dir}"/>
                 <fileset dir="${lib.dir}">
