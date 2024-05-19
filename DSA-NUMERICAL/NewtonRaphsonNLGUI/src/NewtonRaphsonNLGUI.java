@@ -76,7 +76,7 @@ public class NewtonRaphsonNLGUI {
 
         JButton solveButton = new JButton("Solve");
 
-        String[] columnNames = {"Iteration", "x", "y", "errorX", "errorY"};
+        String[] columnNames = {"Iteration", "x", "y", "XError", "YError"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable resultTable = new JTable(tableModel);
         JScrollPane tableScrollPane = new JScrollPane(resultTable);
