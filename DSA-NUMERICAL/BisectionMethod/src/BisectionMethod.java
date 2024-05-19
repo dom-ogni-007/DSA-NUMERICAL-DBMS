@@ -6,10 +6,10 @@ import java.awt.event.ActionListener;
 
 public class BisectionMethod {
     public static double function(double x, String equation) {
-        return parseEquation(equation, x);
+        return equationparser(equation, x);
     }
 
-    private static double parseEquation(String equation, double x) {
+    private static double equationparser(String equation, double x) {
         equation = equation.replaceAll("\\s+", "");
         String[] terms = equation.split("(?=[+-])");
 
@@ -56,11 +56,12 @@ public class BisectionMethod {
         int iteration = 0;
         while ((b - a) >= epsilon) {
             mid = (a + b) / 2;
-            double yMid = function(mid, equation);
-            tableModel.addRow(new Object[]{iteration, a, b, mid, yMid});
-            if (Math.abs(yMid) < 1e-10) {
+            double fmid = function(mid, equation);
+            double error = Math.abs(b - a);
+            tableModel.addRow(new Object[]{iteration, a, b, mid, fmid, error});
+            if (Math.abs(fmid) < 1e-10) {
                 return mid;
-            } else if (Lower * yMid < 0) {
+            } else if (Lower * fmid < 0) {
                 b = mid;
             } else {
                 a = mid;
@@ -71,7 +72,7 @@ public class BisectionMethod {
         return mid;
     }
 
-    public static void main(String[] args) {
+    public static void createAndShowGUI() {
         JFrame frame = new JFrame("Bisection Method Solver");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
@@ -91,9 +92,9 @@ public class BisectionMethod {
         JLabel errorLabel = new JLabel("Enter error:");
         JTextField errorField = new JTextField();
 
-        JButton solveButton = new JButton("Solve");
+        JButton solveButton = new JButton("Calculate");
 
-        String[] columnNames = {"Iteration", "Lower Bound", "Upper Bound", "Mid", "f(Mid)"};
+        String[] columnNames = {"Iteration", "a", "b", "mid", "f(mid)", "Error"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable resultTable = new JTable(tableModel);
         JScrollPane tableScrollPane = new JScrollPane(resultTable);
@@ -132,5 +133,14 @@ public class BisectionMethod {
         });
 
         frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                createAndShowGUI();
+            }
+        });
     }
 }
