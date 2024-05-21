@@ -1,1 +1,0 @@
-jacobimethod.JacobiMethod
