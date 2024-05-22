@@ -1,0 +1,20 @@
+NOTES:
+DATABASE - inventory0
+username, password, servername = edit nio nalang
+
+database inventory0
+table products
+
+| id | name                       | quantity | stock | price  |
++----+----------------------------+----------+-------+--------+
+|  1 | Mang Tomas                 |       10 |    46 |  30.00 |
+|  2 | Superbook                  |        5 |    19 | 599.00 |
+|  3 | Relo ni Ben 10             |        7 |    53 | 678.00 |
+|  4 | Parokya ni Edgar Brief Set |        0 |   887 | 500.00 |
+
+
+INSERT INTO products (name, quantity, stock, price) VALUES
+('Mang Tomas', 10, 46, 30.00),
+('Superbook', 5, 19, 599.00),
+('Relo ni Ben 10', 7, 53, 678.00),
+('Parokya ni Edgar Brief Set', 0, 887, 500.00);
