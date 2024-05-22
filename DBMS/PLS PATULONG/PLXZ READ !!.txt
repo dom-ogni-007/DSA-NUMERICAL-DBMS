@@ -19,3 +19,7 @@ INSERT INTO products (name, quantity, stock, price) VALUES
 ('Superbook', 5, 19, 599.00),
 ('Relo ni Ben 10', 7, 53, 678.00),
 ('Parokya ni Edgar Brief Set', 0, 887, 500.00);
+
++++
+lagay nio ung password nio and username
+need idl lahat ng files
