@@ -23,3 +23,5 @@ INSERT INTO products (name, quantity, stock, price) VALUES
 +++
 lagay nio ung password nio and username
 need idl lahat ng files
+
+ung inventory1.php e ung home page, di ko narename
