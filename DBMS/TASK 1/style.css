@@ -1,42 +1,84 @@
+/* General styles */
 body {
-  font-family: sans-serif;
-  margin: 0; /* Remove default margin */
-  display: flex; /* Allow stacking sidebar and content */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
 }
 
-.sidebar {
-  width: 200px; /* Set sidebar width */
-  background-color: #f1f1f1; /* Light gray background */
-  padding: 20px; /* Add padding for content */
+h2 {
+  color: #333;
 }
 
-.sidebar a {
-  text-decoration: none; /* Remove underline from links */
-  color: black; /* Set link color */
-  display: block; /* Display links as block elements */
-  padding: 8px 6px; /* Add padding for links */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
 }
 
-.sidebar a:hover {
-  background-color: #e0e0e0; /* Change background on hover */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
 }
 
-.content {
-  flex: 1; /* Take up remaining space */
-  padding: 20px; /* Add padding for content */
+input[type="text"], input[type="number"], input[type="submit"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-.content h2 {
-  margin-top: 0; /* Remove top margin for heading */
+input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.content table {
-  border-collapse: collapse; /* Remove space between table cells */
-  width: 100%; /* Set table width to full content area */
+input[type="submit"]:hover {
+  background-color: #218838;
 }
 
-.content table th,
-.content table td {
-  border: 1px solid #ddd; /* Add borders to table cells */
-  padding: 8px; /* Add padding to table cells */
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
