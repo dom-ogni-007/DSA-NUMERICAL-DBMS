@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  margin: 0; /* Remove default margin */
+  display: flex; /* Allow stacking sidebar and content */
+}
+
+.sidebar {
+  width: 200px; /* Set sidebar width */
+  background-color: #f1f1f1; /* Light gray background */
+  padding: 20px; /* Add padding for content */
+}
+
+.sidebar a {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Set link color */
+  display: block; /* Display links as block elements */
+  padding: 8px 6px; /* Add padding for links */
+}
+
+.sidebar a:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+}
+
+.content {
+  flex: 1; /* Take up remaining space */
+  padding: 20px; /* Add padding for content */
+}
+
+.content h2 {
+  margin-top: 0; /* Remove top margin for heading */
+}
+
+.content table {
+  border-collapse: collapse; /* Remove space between table cells */
+  width: 100%; /* Set table width to full content area */
+}
+
+.content table th,
+.content table td {
+  border: 1px solid #ddd; /* Add borders to table cells */
+  padding: 8px; /* Add padding to table cells */
+}
